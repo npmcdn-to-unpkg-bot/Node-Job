@@ -1,0 +1,22 @@
+{
+  "name": "node-job",
+  "version": "0.0.1",
+  "homepage": "https://serene-refuge-8620.herokuapp.com/",
+  "authors": [
+    "hchen1202 <hchen1202@gmail.com>"
+  ],
+  "description": "Node-Job",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.6"
+  }
+}

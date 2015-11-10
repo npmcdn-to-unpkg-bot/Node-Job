@@ -1,2 +1,27 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div id="header" class="home-header col-sm-12">
+    <div class="container">
+        <div class="inner">
+            <h1>Ottawa HR agency for Internation Student</h1>
+            <p>Hundreds of Job solution added weekly</p>
+            <form class="main-search" action="#main-nav" method="post" novalidate="novalidate">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="main-search" id="main-search" placeholder="Search jobs..." value="" >
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="fa fa-search"></i>
+                            </button>
+						</span>
+                </div>
+            </form>
+
+        </div>
+        <a id="scroll" href="#main-nav" class="arrow animated bounce">
+            <i class="fa fa-arrow-circle-down"></i>
+        </a>
+    </div>
+</div>
+{{> nav}}
+<div class="view-container">
+    <div ng-view class="view-frame"></div>
+</div>
+</div>
+{{> footer}}
