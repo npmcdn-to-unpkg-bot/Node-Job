@@ -1,0 +1,36 @@
+<nav class="transparent z-depth-0">
+    <div class="container">
+        <ul class="right">
+            <li><a ><i class="material-icons left" id="search-btn">search</i></a></li>
+            <li><a href="#" data-activates="slide-out" id="nav-side"><i class="mdi-navigation-menu"></i></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="search-form">
+    <div class="row">
+        <div class="input-field">
+            <input id="search" type="text" required placeholder="Search...">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+</div>
+<div ng-controller="NavbarCtrl">
+    <ul id="slide-out" class="side-nav " style="background-color: #ee6e73">
+        <li class="center-align"><a href="/">Home</a></li>
+        <li class="center-align"><a href="/">Jobs</a></li>
+        <li class="center-align"><a href="/">Resumes</a></li>
+        <li class="center-align"><a href="/">Interviews</a></li>
+        <li class="center-align"><a href="/">Blogs</a></li>
+        <li class="center-align"><a href="/">Employers</a></li>
+        <li ng-if="!isAuthenticated()" class="center-align"><button class='btn' ui-sref="login">log in</button></li>
+        <li ng-if="!isAuthenticated()" class="center-align"><button class='btn' ui-sref="signup">Sign Up</button></li>
+        <li ng-if="isAuthenticated()" class="center-align"><a href="/#/profile">Profile</a></li>
+        <li ng-if="isAuthenticated()" class="center-align"><button class='btn' ui-sref="login">Logout</button></li>
+    </ul>
+</div>
+<script>
+    $('#search-btn').on('click',function(){
+        $('#search-form').toggle('slow');
+    })
+    $("#nav-side").sideNav();
+</script>
